@@ -271,7 +271,7 @@ export function Information({ fn, current }: { fn: Function, current: number }) 
                     }} className="border-solid border-2 border-black duration-300 m-1  p-1 hover:bg-black hover:text-white">Return to planet 4: Jupiter.</button><br />
                     <button onClick={_e => {
                         changePlanet(6)
-                    }} className="border-solid border-2 border-black duration-300 p-1 m-1 hover:bg-black hover:text-white">View planet 6: Uranus.</button>
+                    }} className="border-solid border-2 border-black duration-300 p-1 m-1 hover:bg-black hover:text-white">View planet 7: Uranus.</button>
                 </section>
             </>)
         case 6:
