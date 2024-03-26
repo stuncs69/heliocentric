@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+// import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
+//@ts-ignore
 import planetData from "./components/planetData.ts";
 import "./App.css";
-import { Information } from "./components/planetInformation.tsx";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import { Information } from "./components/planetInformation.tsx"
 
 export default function App() {
   const [currentPlanet, changeCurrentPlanet] = useState(-1);
@@ -24,6 +24,7 @@ export default function App() {
             ))
           : (
               <Planet
+              // @ts-ignore
                 planet={planetData.find((planet: any) => planet.id === currentPlanet)}
                 key={currentPlanet}
               />
@@ -49,8 +50,9 @@ function Planet({ planet: { color, xRadius, zRadius, size, speed } }) {
   const planetRef = React.useRef();
   let [clockx, setClock] = useState(1.0)
 
+  //@ts-ignore
   useFrame(({ clock }) => {
-    const t = setClock((clockx+speed));
+    setClock((clockx+speed));
     const x = xRadius * Math.sin(clockx);
     const z = zRadius * Math.cos(clockx);
     //@ts-ignore
@@ -61,6 +63,7 @@ function Planet({ planet: { color, xRadius, zRadius, size, speed } }) {
 
   return (
     <>
+    {/* @ts-ignore */}
       <mesh ref={planetRef}>
         <sphereGeometry args={[size, 32, 32]} />
         <meshStandardMaterial color={color} />
@@ -92,6 +95,7 @@ function Ecliptic({ xRadius = 1, zRadius = 1 }) {
 
   const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
   return (
+    //@ts-ignore
     <line geometry={lineGeometry}>
       <lineBasicMaterial attach="material" color="#BFBBDA" linewidth={10} />
     </line>

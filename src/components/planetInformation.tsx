@@ -1,5 +1,3 @@
-import { Tooltip } from 'react-tooltip'
-
 export function Information({ fn, current }: { fn: Function, current: number }) {
 
     const changePlanet = (planetId: number) => {
