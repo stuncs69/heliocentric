@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 //@ts-ignore
 import planetData from "./components/planetData.ts";
@@ -7,8 +7,6 @@ import { Information } from "./components/planetInformation.tsx";
 import Sun from "./components/Sun.tsx";
 import Planet  from "./components/Planet.tsx";
 import Lights from "./components/Lights.tsx";
-import Stats from 'stats.js'
-
 
 export default function App() {
   const [currentPlanet, changeCurrentPlanet] = useState(-1);
