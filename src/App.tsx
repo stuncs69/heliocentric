@@ -25,6 +25,7 @@ export default function App() {
             ))
           : (
               <Planet
+              //@ts-ignore
                 planet={planetData.find((planet: any) => planet.id === currentPlanet)}
                 key={currentPlanet}
               />
