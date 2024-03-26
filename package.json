@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-popper": "^2.3.0",
     "react-tooltip": "^5.26.3",
+    "stats.js": "^0.17.0",
     "three": "^0.162.0"
   },
   "devDependencies": {
