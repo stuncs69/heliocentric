@@ -5,27 +5,42 @@ import * as THREE from "three";
 import planetData from "./components/planetData.ts";
 import "./App.css";
 import { Information } from "./components/planetInformation.tsx";
+import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
 export default function App() {
+  const [currentPlanet, changeCurrentPlanet] = useState(-1);
+
+  const changePlanet = (id: number) => {
+    changeCurrentPlanet(id);
+  };
+
   return (
     <>
       <Canvas camera={{ position: [0, 60, 25], fov: 45 }}>
         <Sun />
-        {planetData.map((planet: any) => (
-          <Planet planet={planet} key={planet.id} />
-        ))}
+        {currentPlanet === -1
+          ? planetData.map((planet: any) => (
+              <Planet planet={planet} key={planet.id} />
+            ))
+          : (
+              <Planet
+                planet={planetData.find((planet: any) => planet.id === currentPlanet)}
+                key={currentPlanet}
+              />
+            )}
         <Lights />
-        <OrbitControls />
+        {/* <OrbitControls /> */}
       </Canvas>
-      <Information />
+      <Information current={currentPlanet} fn={changePlanet} />
     </>
   );
 }
+
 function Sun() {
   return (
     <mesh>
       <sphereGeometry args={[2.5, 32, 32]} />
-      <meshStandardMaterial color="#E1DC59" />
+      <meshStandardMaterial color="#E1DC59" emissive="#E1DC59" />
     </mesh>
   );
 }
