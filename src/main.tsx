@@ -6,11 +6,6 @@ import 'react-tooltip/dist/react-tooltip.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <main>
-      <div className='absolute left-px bottom-px text-gray-950 z-20'>
-        <h1 className='text-gray'>Renderer: WebGL</h1>
-      </div>
-    </main>
     <App />
   </React.StrictMode>,
 )
