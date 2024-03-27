@@ -9,7 +9,7 @@ export function Information({ fn, current }: { fn: Function, current: number }) 
     switch (current) {
         case -1:
             return (<>
-                <section className="z-20 absolute top-0 left-0 m-10">
+                <section className="z-20 absolute top-0 left-0 m-10 overflow-scroll">
                     <h1 className="text-5xl">Our solar system.</h1><br />
                     <p>Project by <i><a href="https://github.com/stuncs69">stuncs69.</a></i><br/>
                     Background solar system made with <i><a href="https://threejs.org/">Three.js.</a></i><br/>
