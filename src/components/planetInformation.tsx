@@ -13,7 +13,7 @@ export function Information({ fn, current }: { fn: Function, current: number }) 
                     <h1 className="text-5xl">Our solar system.</h1><br />
                     <p>Project by <i><a href="https://github.com/stuncs69">stuncs69.</a></i><br/>
                     Background solar system made with <i><a href="https://threejs.org/">Three.js.</a></i><br/>
-                    Frontend/CSS made with <i><a href="https://tailwindcss.com/">TailwindCSS</a></i></p>
+                    Frontend/CSS made with <i><a href="https://tailwindcss.com/">TailwindCSS</a></i> and <i><a href="https://react.dev/">React.</a></i></p>
                     <button onClick={_e => {
                         changePlanet(0)
                     }} className="border-solid border-2 border-black duration-300 p-1 hover:bg-black hover:text-white">View planet 1: Mercury.</button>
@@ -424,6 +424,18 @@ export function Information({ fn, current }: { fn: Function, current: number }) 
                     <button onClick={_e => {
                         changePlanet(-1)
                     }} className="border-solid border-2 border-black duration-300 p-1 m-1 hover:bg-black hover:text-white">Back home.</button>
+                </section>
+            </>)
+        case 9:
+            return (<>
+                <section className="z-20 absolute top-0 left-0 m-10 overflow-scroll max-h-screen pb-20">
+                    <h1 className="text-5xl">Gas giants.</h1><br />
+                    <p>A gas giant is a giant planet composed mainly of hydrogen and helium. Gas giants are also called failed stars because they contain the same basic elements as a star.<br /> Jupiter and Saturn are the gas giants of the Solar System. The term "gas giant" was originally synonymous with "giant planet". <br />However, in the 1990s, it became known that Uranus and Neptune are really a distinct class of giant planets, being composed mainly of heavier volatile substances (which are referred to as "ices").<br /> For this reason, Uranus and Neptune are now often classified in the separate category of ice giants.</p>
+                    <br/>
+                    <button onClick={_e => {
+                        changePlanet(-1)
+                    }} className="border-solid border-2 border-black duration-300 p-1 m-1 hover:bg-black hover:text-white">Back home.</button>
+                    <QuickSwitcher fn={changePlanet} />
                 </section>
             </>)
     }

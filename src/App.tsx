@@ -5,7 +5,7 @@ import planetData from "./components/planetData.ts";
 import "./App.css";
 import { Information } from "./components/planetInformation.tsx";
 import Sun from "./components/Sun.tsx";
-import Planet  from "./components/Planet.tsx";
+import Planet from "./components/Planet.tsx";
 import Lights from "./components/Lights.tsx";
 
 export default function App() {
@@ -15,30 +15,28 @@ export default function App() {
     changeCurrentPlanet(id);
   };
 
-  // useEffect(() => {
-  //   const stats = new Stats()
-  //   stats.showPanel(0)
-  //   document.body.appendChild(stats.dom)
-  //   stats.begin()
-  // }, [])
-
   return (
     <>
       <Canvas camera={{ position: [0, 60, 25], fov: 45 }}>
         <Sun />
-        {currentPlanet === -1
-          ? planetData.map((planet: any) => (
+        {currentPlanet === -1 ? (
+          planetData.map((planet: any) => (
+            <Planet planet={planet} key={planet.id} />
+          ))
+        ) : currentPlanet === 9 ? (
+          planetData
+            .filter((planet: any) => planet.gasGiant)
+            .map((planet: any) => (
               <Planet planet={planet} key={planet.id} />
             ))
-          : (
-              <Planet
-              //@ts-ignore
-                planet={planetData.find((planet: any) => planet.id === currentPlanet)}
-                key={currentPlanet}
-              />
-            )}
+        ) : (
+          <Planet
+            //@ts-ignore
+            planet={planetData.find((planet: any) => planet.id === currentPlanet)}
+            key={currentPlanet}
+          />
+        )}
         <Lights />
-        {/* <OrbitControls /> */}
       </Canvas>
       <Information current={currentPlanet} fn={changePlanet} />
     </>

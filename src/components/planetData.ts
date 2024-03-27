@@ -23,7 +23,8 @@ let realisticPlanetData = [
     xRadius: (0 + 1.5) * 4,
     zRadius: (0 + 1.5) * 2,
     size: 0.6,
-    speed: 0.007
+    speed: 0.007,
+    gasGiant: false,
   },
   {
     id: 1, // Venus
@@ -31,7 +32,8 @@ let realisticPlanetData = [
     xRadius: (1 + 1.5) * 4,
     zRadius: (1 + 1.5) * 2,
     size: 0.9,
-    speed: 0.005
+    speed: 0.005,
+    gasGiant: false,
   },
   {
     id: 2, // Earth
@@ -39,7 +41,8 @@ let realisticPlanetData = [
     xRadius: (2 + 1.5) * 4,
     zRadius: (2 + 1.5) * 2,
     size: 1.0,
-    speed: 0.008
+    speed: 0.008,
+    gasGiant: false,
   },
   {
     id: 3, // Mars
@@ -47,7 +50,8 @@ let realisticPlanetData = [
     xRadius: (3 + 1.5) * 4,
     zRadius: (3 + 1.5) * 2,
     size: 0.7,
-    speed: 0.006
+    speed: 0.006,
+    gasGiant: false,
   },
   {
     id: 4, // Jupiter
@@ -55,7 +59,8 @@ let realisticPlanetData = [
     xRadius: (4 + 1.5) * 4,
     zRadius: (4 + 1.5) * 2,
     size: 1.5,
-    speed: 0.003
+    speed: 0.003,
+    gasGiant: true,
   },
   {
     id: 5, // Saturn
@@ -63,7 +68,8 @@ let realisticPlanetData = [
     xRadius: (5 + 1.5) * 4,
     zRadius: (5 + 1.5) * 2,
     size: 1.2,
-    speed: 0.004
+    speed: 0.004,
+    gasGiant: true,
   },
   {
     id: 6, // Uranus
@@ -71,7 +77,8 @@ let realisticPlanetData = [
     xRadius: (6 + 1.5) * 4,
     zRadius: (6 + 1.5) * 2,
     size: 1.1,
-    speed: 0.0025
+    speed: 0.0025,
+    gasGiant: true,
   },
   {
     id: 7, // Neptune
@@ -79,7 +86,8 @@ let realisticPlanetData = [
     xRadius: (7 + 1.5) * 4,
     zRadius: (7 + 1.5) * 2,
     size: 1.1,
-    speed: 0.002
+    speed: 0.002,
+    gasGiant: true,
   },
   {
     id: 8, // Pluto
@@ -87,7 +95,8 @@ let realisticPlanetData = [
     xRadius: (8 + 1.5) * 4,
     zRadius: (8 + 1.5) * 2,
     size: 0.3,
-    speed: 0.001
+    speed: 0.001,
+    gasGiant: false,
   }
 ];
 

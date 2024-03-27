@@ -13,7 +13,7 @@ export function QuickSwitcher({ fn } : { fn: Function }) {
           className="border-solid border-2 border-black duration-300 p-1 hover:bg-black hover:text-white"
            onClick={handleOpen}>Quickly navigate to planet.</button>
            {open ? (
-                <ul className="border-solid border-2 border-black duration-300 mt-2">
+                <ul className="border-solid border-2 border-black duration-300 mt-2 max-w-fit">
                     <li className="p-2 duration-300 hover:bg-black hover:text-white cursor-pointer" onClick={() => fn(-1)}>Home.</li>
                     <li className="p-2 duration-300 hover:bg-black hover:text-white cursor-pointer" onClick={() => fn(0)}>Planet 1: Mercury.</li>
                     <li className="p-2 duration-300 hover:bg-black hover:text-white cursor-pointer" onClick={() => fn(1)}>Planet 2: Venus.</li>
@@ -24,6 +24,7 @@ export function QuickSwitcher({ fn } : { fn: Function }) {
                     <li className="p-2 duration-300 hover:bg-black hover:text-white cursor-pointer" onClick={() => fn(6)}>Planet 7: Uranus.</li>
                     <li className="p-2 duration-300 hover:bg-black hover:text-white cursor-pointer" onClick={() => fn(7)}>Planet 8: Neptune.</li>
                     <li className="p-2 duration-300 hover:bg-black hover:text-white cursor-pointer" onClick={() => fn(8)}>Planet 9: Pluto.</li>
+                    <li className="p-2 duration-300 hover:bg-black hover:text-white cursor-pointer" onClick={() => fn(9)}>More information about gas giants.</li>
                 </ul>
             ) : null}
         </div>
